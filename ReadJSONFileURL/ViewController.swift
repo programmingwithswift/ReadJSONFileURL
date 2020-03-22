@@ -22,7 +22,7 @@ class ViewController: UIViewController {
             self.parse(jsonData: localData)
         }
         
-        let urlString = "https://raw.githubusercontent.com/programmingwithswift/ReadJSONFileURL/master/hostedJsonFile.json"
+        let urlString = "https://raw.githubusercontent.com/programmingwithswift/ReadJSONFileURL/master/hostedDataFile.json"
         self.loadJson(fromURLString: urlString) { (result) in
             switch result {
             case .success(let data):
