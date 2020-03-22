@@ -22,7 +22,8 @@ class ViewController: UIViewController {
             self.parse(jsonData: localData)
         }
         
-        self.loadJson(fromURLString: "https://reddit.com") { (result) in
+        let urlString = "https://raw.githubusercontent.com/programmingwithswift/ReadJSONFileURL/master/hostedJsonFile.json"
+        self.loadJson(fromURLString: urlString) { (result) in
             switch result {
             case .success(let data):
                 self.parse(jsonData: data)
@@ -71,6 +72,7 @@ class ViewController: UIViewController {
             
             print("Title: ", decodedData.title)
             print("Description: ", decodedData.description)
+            print("===================================")
         } catch {
             print("decode error")
         }
