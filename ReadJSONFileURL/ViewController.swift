@@ -49,7 +49,8 @@ class ViewController: UIViewController {
         return nil
     }
     
-    private func loadJson(fromURLString urlString: String, completion: @escaping (Result<Data, Error>) -> Void) {
+    private func loadJson(fromURLString urlString: String,
+                          completion: @escaping (Result<Data, Error>) -> Void) {
         if let url = URL(string: urlString) {
             let urlSession = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
                 if let error = error {
